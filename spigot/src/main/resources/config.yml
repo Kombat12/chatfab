@@ -23,7 +23,7 @@ general:
   # Chat listener priority.
   # Possible values:
   # lowest, low, normal, high, highest.
-  priority: low
+  priority: high
 
   # Chat logging in "plugins/Chatty/logs/".
   log: true
@@ -105,7 +105,7 @@ chats:
     format: |
 
       &7==========================================
-        &c{player}&8: &7{message}
+        &c{player}&8: {message}
       &7==========================================
     range: -3
     symbol: '$'
@@ -224,7 +224,7 @@ json:
   #
   # Supports PlaceholderAPI.
   # You can use "{player}" variable here.
-  link: 'https://www.fab-mine.com'
+  link: 'https://www.fab-mine.net'
 
   # Hover tooltip for the player's name.
   # Supports PlaceholderAPI.
@@ -357,7 +357,7 @@ notifications:
       # Permission: chatty.notification.chat.default
       default:
         # Messages interval.
-        time: 450
+        time: 900
 
         # Messages prefix.
         prefix: ''
@@ -371,10 +371,10 @@ notifications:
         # This JSON will be a message "Try to search it with search system" with hover and clickable text
         messages:
           - '&e[Объявление] &6Последние новости проекта вы можете узнать на нашем сайте или в группе Вконтакте!'
+          - '&3[Помощь] &6Сводка по основным командам на сервере - &b https://fab-mine.net/index.php?pages/help/'
+          - '&c[Важно] &6Не забудьте ознакомиться с правилами проекта - &b https://fab-mine.net/index.php?pages/terms/'
+          - '&3[Помощь] &6Сводка по доступным флагам &eWorldGuard&6 - &b https://www.fab-mine.net/index.php?pages/worldguard-flags/'
           - '&e[Объявление] &6Группа Вконтакте, присоединяйся - &b https://vk.com/fantasyagebuilds'
-          - '&3[Помощь] &6Сводка по основным командам на сервере - &b https://fab-mine.com/index.php?pages/help/'
-          - '&c[Важно] &6Не забудьте ознакомиться с правилами проекта - &b https://fab-mine.com/index.php?pages/terms/'
-          - '&3[Помощь] &6Сводка по доступным флагам &eWorldGuard&6 - &b https://www.fab-mine.com/index.php?pages/worldguard-flags/'
 
         # Permission for seeing notification.
         # Default: true
@@ -600,7 +600,7 @@ miscellaneous:
       enable: true
 
       # Set to '' if you want to make it hidden.
-      message: '&2&l+ &e{prefix}{player}{suffix} &eприсоединился к серверу'
+      message: '&2+ &e{prefix}{player}{suffix} &eприсоединился к серверу'
 
       # Plays sound to all, when player joins.
       # Remove the line if not needed.
@@ -614,7 +614,7 @@ miscellaneous:
       first-join:
         # First join message.
         # Set to '' if you don't want to see special message for the first join.
-        message: '&8&l+ &e{prefix}{player}{suffix} &6присоединился к серверу впервые!'
+        message: '&8+ &e{prefix}{player}{suffix} &6присоединился к серверу впервые!'
         # Plays sound to all, when player joins.
         # Remove the line if not needed.
         sound: ORB_PICKUP
@@ -623,7 +623,7 @@ miscellaneous:
       enable: true
 
       # Set to '' if you want to make it hidden.
-      message: '&4&l- &e{prefix}{player}{suffix} &eвышел с сервера'
+      message: '&4- &e{prefix}{player}{suffix} &eвышел с сервера'
 
       # Plays sound to all, when player quits.
       # Remove the line if not needed.
